@@ -1,0 +1,98 @@
+\documentclass[fontsize=12pt, appendixprefix=true]{scrreprt}
+% appendixprefix: hogy odaírja, hogy "Függelék A", ne csak "A"
+\usepackage[english, magyar]{babel}                        % nyelvi csomag
+\usepackage[T1]{fontenc}                                   % ékezetes bet?knél is legyen automatikus elválasztás
+\usepackage[utf8]{inputenc}                                % ékezetes bet?k kezelése
+\usepackage{mathptmx,times}                                      % alapértelmezett bet?típus ne legyen pixeles
+\usepackage{mathtools}                                     % képletekhez kell
+\usepackage[style=ieee, backend=biber]{biblatex}           % bibliográfia
+\addbibresource{thesis.bib}
+\usepackage{graphicx}                                      % képek beszúrása
+\usepackage[export]{adjustbox}                             % ez a logó pozicionálásához kell
+\usepackage[margin=2.5cm, bindingoffset=0.5cm]{geometry}  % margók
+\usepackage[onehalfspacing]{setspace}                      % másfeles sorköz
+\usepackage[hidelinks, unicode, pdfusetitle]{hyperref}     % kattintható tartalomjegyzék és hivatkozások
+\usepackage{bookmark}                                      % PDF könyvjelz?k
+\usepackage{csquotes}                                      % a bibliográfiában megfelel?en legyenek formázva az idéz?jelek
+\setcounter{tocdepth}{2}
+\DeclareQuoteAlias{dutch}{magyar}
+
+% Kódrészletekhez ajánlom
+\usepackage{listings, scrhack}
+\usepackage{sourcecodepro} % egy jó bet?típus
+\lstset{captionpos=b, numberbychapter=false, basicstyle=\ttfamily, showstringspaces=false, columns=fullflexible}
+\renewcommand\lstlistingname{kódrészlet}
+\makeatletter
+\renewcommand\fnum@lstlisting{\ifx\lst@@caption\@empty\else\thelstlisting.~\fi\lstlistingname}%
+\makeatother
+
+\titlehead{\includegraphics[width=1.0\linewidth,height=0.5\textheight]{logo}}
+\subject{A természet megjelenítése a minta tervezésben}
+\author{Sárkány Lili\\Kézműves Tárgykúltúra}
+\title{Szakdolgozat}
+\date{2021}
+\publishers{Témavezető:\\Papp Anett}
+
+% Nyilatkozathoz két parancs definíciója
+\newcommand{\pushtobottom}{\vspace*{\fill}}
+\newcommand{\signatureline}[1]{\begin{flushright}
+	\vspace*{.5cm}\par\noindent\makebox[2.5in]{\hrulefill}
+	\par\noindent\makebox[2.5in][c]{#1}
+	\end{flushright}
+}
+
+\begin{document}
+\maketitle
+
+Alulírott ...
+\pushtobottom
+\signatureline{Aláírás}
+
+\tableofcontents
+%\newpage
+%\section*{Kivonat}
+%
+%\newpage
+%\section*{Abstract}
+%\begin{otherlanguage}{english}
+%% ide írd az angol abstractot, különben magyar elválasztást használ
+%\end{otherlanguage}
+
+\chapter{A természet mint eszköz és forrása}
+\section{Alap fogalmak}
+\section{A természet mint művészeti inspiráció}
+\section{A természet mint eszköz a művészetben}
+\subsection{Színanyagok}
+\subsection{Eszközök}
+
+\chapter{Az indigóval való festés}
+\section{Technologiája}
+\section{Földrajzi varianciája}
+\subsection{Magyarországon}
+\subsection{Ázsiában}
+\subsection{Különböző régiók összehasonlítása}
+
+\chapter{A kékfestés}
+\section{Előzménye és Történelmi áttekintése}
+\section{Technológiája}
+\subsection{Alapanyaga}
+\subsection{Folyamata}
+\section{A természet mint inspiráció}
+\section{Minta dúcok}
+\subsection{Alap minták}
+\subsection{Minta fejlődés}
+\subsection{Egyébb fő minták motívumok}
+\section{Hagyományos kékfestő műhelyek}
+\section{Egyéb műhelyek}
+\subsection{Kortás megoldások}
+\subsection{Adaptációk}
+
+\chapter{Összefoglalás} 
+
+
+\printbibliography
+\renewcommand{\appendixname}{Függelék}  % különben "Appendix"-et ír
+\appendix
+\chapter{Mellékletek listája}
+
+\end{document}
