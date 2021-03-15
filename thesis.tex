@@ -27,12 +27,14 @@
 \renewcommand\fnum@lstlisting{\ifx\lst@@caption\@empty\else\thelstlisting.~\fi\lstlistingname}%
 \makeatother
 
-\titlehead{\includegraphics[width=1.0\linewidth,height=0.5\textheight]{logo}}
-\subject{A természet megjelenítése a minta tervezésben}
-\author{Sárkány Lili\\Kézműves Tárgykúltúra}
-\title{Szakdolgozat}
-\date{2021}
-\publishers{Témavezető:\\Papp Anett}
+% \titlehead{\includegraphics[width=1.0\linewidth,height=0.5\textheight]{logo}}
+% \subject{A természet megjelenítése a minta tervezésben}
+% \author{Sárkány Lili\\Kézműves Tárgykúltúra}
+% \title{Szakdolgozat}
+% \date{2021}
+% \publishers{Témavezető:\\Papp Anett}
+
+
 
 % Nyilatkozathoz két parancs definíciója
 \newcommand{\pushtobottom}{\vspace*{\fill}}
@@ -43,8 +45,10 @@
 }
 
 \begin{document}
-\maketitle
+%\maketitle
 
+\input{titlepage.tex}
+\input{nyilatkozat.tex}
 % Alulírott ...
 % \pushtobottom
 % \signatureline{Aláírás}
