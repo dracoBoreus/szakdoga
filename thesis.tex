@@ -7,7 +7,6 @@
 \usepackage{csquotes}
 %\usepackage[style=apa, natbib, backend=biber, language=magyar]{biblatex}           
 %\addbibresource{thesis.bib}
-\usepackage{apacite}
 \usepackage{graphicx}                                      
 \usepackage{subcaption}
 \usepackage[export]{adjustbox}                             
@@ -20,6 +19,8 @@
 
 \usepackage{listings, scrhack}
 \usepackage{sourcecodepro} 
+\usepackage{apacite}
+\bibliographystyle{apacite}
 \lstset{captionpos=b, numberbychapter=false, basicstyle=\ttfamily, showstringspaces=false, columns=fullflexible}
 \renewcommand\lstlistingname{kódrészlet}
 \makeatletter
@@ -454,7 +455,6 @@ Bemutattam olyan kortás művészeket akiki  ekét hagyományos kézműves techn
 
 
 %\printbibliography
-\bibliographystyle{apacite}
 \bibliography{thesis}
 
 \renewcommand{\appendixname}{Függelék}  % különben "Appendix"-et ír
