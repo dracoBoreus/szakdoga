@@ -19,6 +19,7 @@
 
 \usepackage{listings, scrhack}
 \usepackage{sourcecodepro} 
+\usepackage{enumitem}
 \usepackage{apacite}
 \bibliographystyle{apacite}
 \lstset{captionpos=b, numberbychapter=false, basicstyle=\ttfamily, showstringspaces=false, columns=fullflexible}
@@ -26,15 +27,6 @@
 \makeatletter
 \renewcommand\fnum@lstlisting{\ifx\lst@@caption\@empty\else\thelstlisting.~\fi\lstlistingname}%
 \makeatother
-
-% \titlehead{\includegraphics[width=1.0\linewidth,height=0.5\textheight]{logo}}
-% \subject{A természet megjelenítése a minta tervezésben}
-% \author{Sárkány Lili\\Kézműves Tárgykúltúra}
-% \title{Szakdolgozat}
-% \date{2021}
-% \publishers{Témavezető:\\Papp Anett}
-
-
 
 % Nyilatkozathoz két parancs definíciója
 \newcommand{\pushtobottom}{\vspace*{\fill}}
@@ -45,32 +37,18 @@
 }
 
 \begin{document}
-%\maketitle
 
 \input{titlepage.tex}
+\input{kivonat.tex}
 \input{nyilatkozat.tex}
-% Alulírott ...
-% \pushtobottom
-% \signatureline{Aláírás}
-
-\newpage
-\section*{Kivonat}
-Dolgozat témám a természet megjelenítése a mintatervezésben .
-Az egyik kutatási területem a természeti mintaelemek miként jelenek meg a művészetben azon belül a Textil művészetben milyen alapanyagokat , eszközöket  hassználtak fel természet által .
-ez hogyan jelenik  meg a kékfestészetben is .
-Bemutatok néhány olyan magyar textilművészt akik ezen területen és a természt által inspirálodav csodás munkákat hozztak létre 
-\newpage
-\section*{Abstract}
-\begin{otherlanguage}{english}
-This is the abstract what is abstract
-% ide írd az angol abstractot, különben magyar elválasztást használ
-\end{otherlanguage}
 
 \tableofcontents
-\section{Bevezetés}
-Dolgozatomban befogom mutatni természet által létrehozoztt mintakincseket minta elemeket .
+
+
+\chapter{Bevezetés}
+Dolgozatomban befogom mutatni természet által létrehozoztt mintakincseket minta elemeket.
 Ezek miként jelenek meg a textiliparban milyen hogyan alkalmazák a a természetet a művészek a munkáikban és milyen hatással volt rájuk a természet 
-és milyen újítások történtek .
+és milyen újítások történtek.
 
 
 \chapter{A természet mint eszköz és forrása}
@@ -454,7 +432,7 @@ Tóvaj Rozália mestermunkája során azzal foglalkozott, hogy újra szerette vo
 	\label{fig:tr}
   \end{figure}
 
-\chapter{Összefoglalás} 
+\chapter{Összegzés} 
 A szakdolgozatom irássa közben megismertem, hogy a természet mint eszköz és forrás hogyan valósul meg és ezek milyen hatással voltak/vannak az emberiségre milyen technikák, minták alakultak ki.
 Ezeknek az ismerete új inspirációt adott és irányt adtak a saját mintakicsem bővitésére.
 
