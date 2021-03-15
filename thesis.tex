@@ -1,25 +1,25 @@
-\documentclass[fontsize=12pt, appendixprefix=true]{scrreprt}
-% appendixprefix: hogy odaírja, hogy "Függelék A", ne csak "A"
-\usepackage[english, magyar]{babel}                        % nyelvi csomag
-\usepackage[T1]{fontenc}                                   % ékezetes bet?knél is legyen automatikus elválasztás
-\usepackage[utf8]{inputenc}                                % ékezetes bet?k kezelése
-\usepackage{mathptmx,times}                                      % alapértelmezett bet?típus ne legyen pixeles
-\usepackage{mathtools}                                     % képletekhez kell
-\usepackage[style=ieee, backend=biber]{biblatex}           % bibliográfia
-\addbibresource{thesis.bib}
-\usepackage{graphicx}                                      % képek beszúrása
-\usepackage[export]{adjustbox}                             % ez a logó pozicionálásához kell
-\usepackage[margin=2.5cm, bindingoffset=0.5cm]{geometry}   % margók
-\usepackage[onehalfspacing]{setspace}                      % másfeles sorköz
-\usepackage[hidelinks, unicode, pdfusetitle]{hyperref}     % kattintható tartalomjegyzék és hivatkozások
-\usepackage{bookmark}                                      % PDF könyvjelz?k
-\usepackage{csquotes}                                      % a bibliográfiában megfelel?en legyenek formázva az idéz?jelek
+\documentclass[fontsize=12pt, appendixprefix=true]{scrreprt} 
+\usepackage[english, magyar]{babel}                        
+\usepackage[T1]{fontenc}                                   
+\usepackage[utf8]{inputenc}                                
+\usepackage{mathptmx,times}                                      
+\usepackage{mathtools}                                     
+\usepackage{csquotes}
+%\usepackage[style=apa, natbib, backend=biber, language=magyar]{biblatex}           
+%\addbibresource{thesis.bib}
+\usepackage{apacite}
+\usepackage{graphicx}                                      
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}                             
+\usepackage[margin=2.5cm, bindingoffset=0.5cm]{geometry}   
+\usepackage[onehalfspacing]{setspace}                      
+\usepackage[hidelinks, unicode, pdfusetitle]{hyperref}     
+\usepackage{bookmark}                                       
 \setcounter{tocdepth}{2}
 \DeclareQuoteAlias{dutch}{magyar}
 
-% Kódrészletekhez ajánlom
 \usepackage{listings, scrhack}
-\usepackage{sourcecodepro} % egy jó bet?típus
+\usepackage{sourcecodepro} 
 \lstset{captionpos=b, numberbychapter=false, basicstyle=\ttfamily, showstringspaces=false, columns=fullflexible}
 \renewcommand\lstlistingname{kódrészlet}
 \makeatletter
@@ -62,10 +62,46 @@ This is the abstract what is abstract
 
 \chapter{A természet mint eszköz és forrása}
 
-Az emberek vizuális lények ezért a minket körülvevő tárgyak formája mintázata befolyásolja a mentális és lelki állapotunkat is. Ezeknek az organikus mintázatoknak a hatása közismert és jóldokumentált mint, ahogy az \cite{biophilic} -ben is olvasható. Ezek az organikus mintázatok lehetővé teszik hogy az ember fenntartsa azt az ősi kapcsolatot ami össze köti a természettel. 
+Az emberek vizuális lények ezért a minket körülvevő tárgyak formája mintázata (\ref{fig:nat_pet} ábra) befolyásolja a mentális és lelki állapotunkat is. Ezeknek az organikus mintázatoknak a hatása közismert és jóldokumentált mint, ahogy az \cite{jo2019physiological} -ben is olvasható. Ezek az organikus mintázatok lehetővé teszik hogy az ember fenntartsa azt az ősi kapcsolatot ami össze köti a természettel. 
 
-Mint ahogy azt Kovács Nemere is kifejti a A képzőművészet története III. részében az ősművészeteknél \cite{nemerekepzHomHuveszet} a természeti motívumok és eszközök már az ősidők óta részét képezik az emberi művészetnek. Amikor a barlang rajzokat készítették számukra az elsődleges forrás a természet volt.
+\begin{figure*}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.225\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/nat_pat_01.jpg}
+		\caption{}    
+	\end{subfigure}
+	\hspace{10 mm}
+	\begin{subfigure}[b]{0.225\textwidth}  
+		\centering 
+		\includegraphics[width=\textwidth]{img/nat_pat_02.jpg}
+		\caption{}  
+	\end{subfigure}
+	\vskip\baselineskip
+	\begin{subfigure}[b]{0.225\textwidth}   
+		\centering 
+		\includegraphics[width=\textwidth]{img/nat_pat_03.jpg}
+		\caption{}    
+	\end{subfigure}
+	\hspace{10 mm}
+	\begin{subfigure}[b]{0.225\textwidth}   
+		\centering 
+		\includegraphics[width=\textwidth]{img/nat_pat_04.jpg}
+		\caption{}  
+	\end{subfigure}
+	\caption{}
+	\label{fig:nat_pet}
+\end{figure*}
+
+Mint ahogy azt Kovács Nemere is kifejti a A képzőművészet története III. részében az ősművészeteknél \cite{nemerekepzHomHuveszet} a természeti motívumok és eszközök már az ősidők óta részét képezik az emberi művészetnek. Amikor a barlang rajzokat készítették számukra az elsődleges forrás a természet volt, lásd \ref{fig:osi} ábra.
 Abban az időben az ember csak a környezetében található tárgyakat tudta felhasználni és az akkor kialakuló emberi kreativitás által az egyszerű eszközök és alapanyagokból létrehozni a művészetet. A saját tapasztalatuk útján jöttek rá, hogy miként tudják felhasználni az őket körülvevő anyagokat: növények, ásványok, rovarok és mindent amit megismert az elméjük. Az így megismert és létrehozott alapanyagokkal kezdték újrateremteni az érzékelt világot primitív művészeti formákban, például barlang rajzok, kezdetleges bőr művek vagy éppen primitív szövetek formályában. A legleső szín ami az ősi művészetekben megjelen a sárga és annak árnyalatai voltak amit különböző növényekből tudtak elő állítani.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/osi.jpg}
+	\caption{Barlang rajz}
+	\label{fig:osi}
+\end{figure}
 
 Első ránézésre a természet néha egy kaotikus képet mutat magáról amit nehéz értelmezi, de az idő haladtával az ember kelkezdete ezeket a kaotikus mintázattokat vizsgálni és értelmezni és rájöttek, hogy ebben a kaotikus képben valamelyest rejlik egy matematikai rend.
 
@@ -110,9 +146,9 @@ Egy közismert mai kortás alkotó aki művészetében vissza nyúl az ősi alap
 Munkáinak az elkészítési ideje hosszú folyamat, a felhasznált alap anyagok össze gyűjtése és előkészítése mélyíti el azt az ősi kapcsolatot ami művész és műalkotás között ki tudd alakulni.
 A kész művei fényképformájában maradtak fent mivel ezek az alkotások a természetben helyezkednek el és semmilyen olyan alkotó elemet nem tartalmaztak ami megóvná a természet viszontagságaitól és lassan elamortizálódtak ilyen módon fejezte ki, hogy a tényleges műalkotás múlandó.
 
-\section{A természet a magyar kortás művészetben}
+% \section{A természet a magyar kortás művészetben}
 
-Ide bármilyen kortárs magyar művészt aki valamilyen természet közelit csinál.
+% Ide bármilyen kortárs magyar művészt aki valamilyen természet közelit csinál.
 
 % \subsection{Színanyagok}
 % A természetben előforduló pigment anyagok melyek felhasználásra kerülnek a legkülönfélébb művészeti alkotásokban:
@@ -121,9 +157,18 @@ Ide bármilyen kortárs magyar művészt aki valamilyen természet közelit csin
 % Nyomódúc. textilminták előállítására használt fa mintanyomó eszköz, leginkább puha és keményebb fa fajtákból készült mint például gesztenye fa vagy dió fa vagy tölgy vagy bükk
 \section{A természet a saját mintáimban}
 Az eddig munkáim során a ösztönösen a természetnél lyukadtam ki, de miért pont a természetnél azt még az elején magam se tudtam, ahogy elkezdtem a különböző feladataim során a tanulmányokat mindig a fák és terméseik lettek a fókuszban e fafajták közül hármat választottam.
+
 Próbáltam olyan természeti elemeket keresni, amik a minden napi köztudatban benne vannak és ezeket a természeti formákat mindenki ismeri és találkozót vele és már felhasználta ezeket valamiyen formában. 
-Ezek a termések a dió, a makk és a gesztenye volt.
+
+Ezek a termések a dió, a makk és a gesztenye volt \ref{fig:sajat1} ábra.
 Ezeket a terméseket szeretném egy újabb, modernebb irányban vinni ahol ezek a természeti elemek más arculatban, könnyed vonal rendszerrel, de mégis felismerhető minta ként jelenjenke meg az emberek számára.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/sajat01.jpg}
+	\caption{Saját mintakészlet fejlődés. Gesztenye - Mak - Dió}
+	\label{fig:sajat1}
+\end{figure}
 
 \chapter{Az indigóval való festés}
 Az indigó név Római indicum -ból származik ami Indiai terméket jelent.
@@ -184,12 +229,12 @@ A maratás folyamata egy kék színű alap szövet is nyomtatható maró anyagga
 \subsection{Ázsiában}
 A Shibori egy a 8. századból származó japán textil festési technika amelynek lényege, hogy különböző kötözési, csomózási eljárásokkal állítanak elő tetszőleges mintázatot.
 
-A Sibori számtalan más japán alap technikát foglal magában, iylen technikák például a miura, a kumo, a nui, mindegyikben közös, hogy valamilyen kötözési módszer vagy az anyag hajtogatást alkalmazz. 
+A Shibori számtalan más japán alap technikát foglal magában, iylen technikák például a miura, a kumo, a nui, mindegyikben közös, hogy valamilyen kötözési módszer vagy az anyag hajtogatást alkalmazz. 
 
 A kötözés és halytogatás mellet a szövetett olykor festéktaszító anyaggal is bevonják és ezzel is mintákat hoznak létre.
 
 A teljes minta elő állításának folyamata az alap szövet tisztításával és esetleg fehérítésével kezdődik, ezt követően történik a vasalás és halytogatás vagy a szövet össze fogása és kötözése és felületének kezelése.
-Az shiboriban az hogy milyen technikát használunk nem csak a saját preferenciánktól függ vagy a vágyott mintától, hanem a befestendő anyag tulajdonságaitól is. Ezen kívül  a különböző festési módszerek kombinálhatunk kidogozottabb, bonyolultabb, részletesebb minták elérése érdekében. 
+Az Shiboriban az hogy milyen technikát használunk nem csak a saját preferenciánktól függ vagy a vágyott mintától, hanem a befestendő anyag tulajdonságaitól is. Ezen kívül  a különböző festési módszerek kombinálhatunk kidogozottabb, bonyolultabb, részletesebb minták elérése érdekében. 
 
 \subsection{Különböző régiók összehasonlítása}
    Az országok közötti hasonlóság elsősorban az hogy ugyan azt a festő nővényt használják fel a munkájuk során.
@@ -342,30 +387,76 @@ ment darabokat.
 
 \subsection{Polgár Csaba}
 Polgács Csaba(Budapest, 1942-03-19, Budapest, 2016-02-11) textílművész munkásságát nagy mértékben befolyásolta a kortárs modern művészet, korszerűséget mindigis komolyan vette, munkáiban előszerettetel mutatta meg a szabadság érzetét.
-Egy új művészeti technológiát fejlesztettki amit fényfestésnek vagy fakításnak nevezett el, ez a technika igazából a fotogramnak a fordítottja, folyamat röviden  a következő lépésekből áll, a festett anyag kikerül a napra akkor veszít a színéből, kitakarásokkal lehet szabályozni, hogy hol fakuljon jobban ezzel külömbözö mintákat hozva létre és a kékre festett alap anyagra dróthálókat teker és így rács szerű mintákat fakít ki belőle.
+
+Egy új művészeti technológiát fejlesztettki amit fényfestésnek \ref{fig:quasi} vagy fakításnak nevezett el, ez a technika igazából a fotogramnak a fordítottja, folyamat röviden  a következő lépésekből áll, a festett anyag kikerül a napra akkor veszít a színéből, kitakarásokkal lehet szabályozni, hogy hol fakuljon jobban ezzel külömbözö mintákat hozva létre és a kékre festett alap anyagra dróthálókat teker és így rács szerű mintákat fakít ki belőle.
 Az Ő nevéhez fűződik a Quasi kékfestő program  a programban nem  kékfestő minta dúcokal állitoták elö a mintákat hanem szitával készítették el ezeket a kék anyagokra. Ennek a technikának az alkalmazása teszi lehetővé új textil karakter létre hozását, de megmaradva a múltbeli alap technikáknál.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/quasi.jpg}
+	\caption{Quasi kékfestő program - fényfestésnek - ing}
+	\label{fig:quasi}
+\end{figure}
+
 \subsection{Horváth Yoshihara Hanga} 
-Horváth Yoshihara Hanga japánban élő textilművész fő kutatási területea a kékfestés hagyományos japán megfelelője a shibori.
+Horváth Yoshihara Hanga japánban élő textilművész fő kutatási területea a kékfestés hagyományos japán megfelelője a Shibori \ref{fig:hyh}.
 A munkái során tanulmányozta a novényi festési technikákat itt leginkább az indigóval való festés, színezés lehetőségeit. Kutatása kitért még a termesztési folyamatokra is amit japántanulmányi utja során Tokusimában végzet.
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.3\linewidth}
+	  \includegraphics[width=\linewidth]{img/hh_01.png}
+	  \caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+	  \includegraphics[width=\linewidth]{img/hh_02.png}
+	  \caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=\linewidth]{img/hh_3.png}
+		\caption{}
+	  \end{subfigure}
+	\caption{Horváth Yoshihara Hanga Shibori munkái (forrás:\href{https://www.instagram.com/cicvarek1223}{instagram.com})}
+	\label{fig:hyh}
+  \end{figure}
 
 \subsection{Tóvaj Rozália}
 Tóvaj rozália mestermunkája során azzal foglalkozott, hogy újra szerette volna gondolni a hagyományos kékfestést. A célja a gazadag kulturkincs és a mintarendszer tovább vitele a jelenkori technologiákkal. A végső eredmény az lett, hogy a hagyományos mintákat 3D nyomtatásal készitette el lágy anygokra így megidézve a hagyományos formai és minta világot.
 
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.3\linewidth}
+	  \includegraphics[width=\linewidth]{img/tr_01.png}
+	  \caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+	  \includegraphics[width=\linewidth]{img/tr_02.png}
+	  \caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=\linewidth]{img/tr_03.png}
+		\caption{}
+	  \end{subfigure}
+	\caption{Tovaj Rozália 3D kékfestés}
+	\label{fig:tr}
+  \end{figure}
+
 \chapter{Összefoglalás} 
-A szakdolgozatom irássa kőzben megismertem hogy a természet mint eszköz hogyan valósul  meg a természeteben mint eszköz hogyan valosúl meg a természetben és ezek milyen hatásal vannak az emberiségre milyen művek alakultak ki természet  által megismerkedtem a természeti mintákkal ezen belül milyne formákban és hogyan jelenek meg ,
-Ezeknek az ismerete új ismeretett adott és irnyzatott adtak a sáját mintakicsem bővitésére .
-Megismerkedtem a természet szinek kialakulásával és hogy ez milyen területeken fordult elö hogyan használták fel és hogyan álitják elő ezeket a természetes színeket és milyen terűleten
-használják fel.
-Ezek a felhasználásiterületek leginkább anygaok megfestésére hassználták fel ide kettő technikát tartozik.
-Az elsö hely ahol ezt alkalmazták ázsiában volt azon is belül Japánban shibori technikánaál alkalmazták másik az magyarországon volt a kékfestő volt.
-E két technika bemutata a festést és minták elő állitásást 
-Bemutatok olyan Kortás művészeket akiki maga a techniká , eljárások  által inspirálodatk .
+A szakdolgozatom irássa kőzben megismertem, hogy a természet mint eszköz és forrás hogyan valósul meg és ezek milyen hatásal voltak/vannak az emberiségre milyen technikák, minták alakultak ki.
+Ezeknek az ismerete új inspirációt adott és irányt adtak a sáját mintakicsem bővitésére.
+Megismerkedtem azokkal az alap módszerekkel amivel az ember felhasználta a természetes szineket és azt hogy hogyan alkaították ki, használtákfel és hogy ez mely területeken fordult mind földrajzilag és művészetileg.
+Ezek a technikák a legfőképpen a textíl művészetekben valósulnak meg az alap anyagok megfestésével, szinezésével.
+A dolgozat alat két fő régiót vizsgáltam meg Ázsiát és Európát ezeken belül is elsődlegesen Japánt és MAgyarországot. Japánban a shibori technika míg magyarországon  a kékfestő volt.
+E két technika bemutatása során meg ismerkedtemm a folyamatokkal melyekkel a txtiliákat szinezik és ahogy ezeken kialakítják a mintázatokat.
+Bemutattam olyan kortás művészeket akiki  ekét hagyományos kézműves technika álltal inspirálódtak és saját adaptációt valósítottakmeg.
 
 
 
 
-\printbibliography
+%\printbibliography
+\bibliographystyle{apacite}
+\bibliography{thesis}
+
 \renewcommand{\appendixname}{Függelék}  % különben "Appendix"-et ír
 \appendix
 \chapter{Mellékletek listája}
