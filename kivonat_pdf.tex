@@ -1,0 +1,41 @@
+\documentclass[fontsize=12pt, appendixprefix=true]{scrreprt} 
+\usepackage[english, magyar]{babel}                        
+\usepackage[T1]{fontenc}                                   
+\usepackage[utf8]{inputenc}                                
+\usepackage{mathptmx,times}                                      
+\usepackage{mathtools}                                     
+\usepackage{csquotes}
+%\usepackage[style=apa, natbib, backend=biber, language=magyar]{biblatex}           
+%\addbibresource{thesis.bib}
+\usepackage{graphicx}                                      
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}                             
+\usepackage[margin=2.5cm, bindingoffset=0.5cm]{geometry}   
+\usepackage[onehalfspacing]{setspace}                      
+\usepackage[hidelinks, unicode, pdfusetitle]{hyperref}     
+\usepackage{bookmark}                                       
+\setcounter{tocdepth}{2}
+\DeclareQuoteAlias{dutch}{magyar}
+
+\usepackage{listings, scrhack}
+\usepackage{sourcecodepro} 
+\usepackage{enumitem}
+\usepackage{apacite}
+\bibliographystyle{myapacite}
+\lstset{captionpos=b, numberbychapter=false, basicstyle=\ttfamily, showstringspaces=false, columns=fullflexible}
+\renewcommand\lstlistingname{kódrészlet}
+\makeatletter
+\renewcommand\fnum@lstlisting{\ifx\lst@@caption\@empty\else\thelstlisting.~\fi\lstlistingname}%
+\makeatother
+
+% Nyilatkozathoz két parancs definíciója
+\newcommand{\pushtobottom}{\vspace*{\fill}}
+\newcommand{\signatureline}[1]{\begin{flushright}
+	\vspace*{.5cm}\par\noindent\makebox[2.5in]{\hrulefill}
+	\par\noindent\makebox[2.5in][c]{#1}
+	\end{flushright}
+}
+
+\begin{document}
+\input{kivonat.tex}
+\end{document}
